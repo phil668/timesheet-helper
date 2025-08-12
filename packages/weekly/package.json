@@ -1,0 +1,27 @@
+{
+  "name": "@timesheet-helper/weekly",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A helper for weekly",
+  "author": "Phil Liu",
+  "license": "MIT",
+  "keywords": [],
+  "sideEffects": false,
+  "main": "index.js",
+  "bin": {
+    "weekly-report": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsx src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "tsdown": "^0.14.1",
+    "tsx": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
