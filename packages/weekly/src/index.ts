@@ -3,7 +3,7 @@
 
 import { readFileSync } from 'node:fs'
 import process from 'node:process'
-import { tify } from 'chinese-conv'
+import { tify } from 'chinese-conv/dist'
 import { printTable } from 'console-table-printer'
 
 interface TaskRecord {
