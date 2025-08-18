@@ -17,6 +17,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "chinese-conv": "^3.0.1",
+    "console-table-printer": "^2.14.6",
     "tsdown": "^0.14.1",
     "tsx": "^4.7.0"
   },
