@@ -70,7 +70,7 @@ function calculateWorkload(startDate: string, endDate: string, workingHours?: st
     const hours = Number.parseFloat(workingHours)
     if (!Number.isNaN(hours) && hours > 0) {
       // 将小时转换为天数，按8小时/天计算
-      return Math.max(0.5, Math.round((hours / 8) * 10) / 10) // 保留一位小数，最少0.5天
+      return Math.round((hours / 8) * 10) / 10 // 保留一位小数
     }
   }
 
@@ -126,6 +126,7 @@ function isDateInRange(dateStr: string, timeRange: TimeRange): boolean {
 
 function parseDate(dateStr: string): Date | null {
   const date = new Date(dateStr)
+  date.setHours(0, 0, 0, 0)
   return Number.isNaN(date.getTime()) ? null : date
 }
 
@@ -243,8 +244,6 @@ function main(): void {
     const tasks = parseCSV(csvContent)
 
     const weeklyItems = convertToWeeklyReport(tasks, timeRange)
-
-    console.log('weeklyItems', weeklyItems)
 
     console.log(`📊 共處理 ${weeklyItems.length} 個任務`)
     console.log('')
